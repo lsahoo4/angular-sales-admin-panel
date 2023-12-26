@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/navbar/navbar.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703576827267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703576827267,
+            "name": "Commit-0",
+            "content": "import { Component, inject } from '@angular/core';\nimport { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';\nimport { AsyncPipe, CommonModule } from '@angular/common';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatListModule } from '@angular/material/list';\nimport { MatIconModule } from '@angular/material/icon';\nimport { Observable } from 'rxjs';\nimport { map, shareReplay } from 'rxjs/operators';\nimport { RouterModule } from '@angular/router';\n\n@Component({\n  selector: 'app-navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.css'],\n  standalone: true,\n  imports: [\n    MatToolbarModule,\n    MatButtonModule,\n    MatSidenavModule,\n    MatListModule,\n    MatIconModule,\n    AsyncPipe,\n    RouterModule,\n    CommonModule\n  ]\n})\nexport class NavbarComponent {\n  private breakpointObserver = inject(BreakpointObserver);\n  menuItems = ['dashboard', 'sales', 'orders', 'customers', 'products'];\n  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)\n    .pipe(\n      map(result => result.matches),\n      shareReplay()\n    );\n}\n"
+        }
+    ]
+}

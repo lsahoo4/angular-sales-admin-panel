@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/card/card.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703577358696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703577358696,
+            "name": "Commit-0",
+            "content": "/*card.component.css*/\r\n.more-button {\r\n    position: absolute;\r\n    top: 5px;\r\n    right: 10px;\r\n }\r\n \r\n .dashboard-card {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    right: 15px;\r\n    bottom: 15px;\r\n }\r\n \r\n \r\n .dashboard-card-content {\r\n    text-align: center;\r\n    flex-grow: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: 100%;\r\n    justify-content: center;\r\n    align-items: stretch;\r\n }\r\n \r\n mat-card {\r\n    display: flex;\r\n    flex-direction: column;\r\n }"
+        }
+    ]
+}

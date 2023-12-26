@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/card/card.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703577330377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703577519850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n             {{title}}\n             <button mat-icon-button class=\"more-button\" [matMenuTriggerFor]=\"menu\" aria-label=\"Toggle menu\">\n                 <mat-icon>more_vert</mat-icon>\n             </button>\n-            <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n+            <!-- <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n                 <button mat-menu-item>Expand</button>\n                 <button mat-menu-item>Remove</button>\n-            </mat-menu>\n+            </mat-menu> -->\n         </mat-card-title>\n     </mat-card-header>\n     <mat-card-content class=\"dashboard-card-content\">\n         <ng-content></ng-content>\n"
+                },
+                {
+                    "date": 1703577541789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n <mat-card class=\"dashboard-card\">\n     <mat-card-header>\n         <mat-card-title>\n             {{title}}\n-            <button mat-icon-button class=\"more-button\" [matMenuTriggerFor]=\"menu\" aria-label=\"Toggle menu\">\n+            <!-- <button mat-icon-button class=\"more-button\" [matMenuTriggerFor]=\"menu\" aria-label=\"Toggle menu\">\n                 <mat-icon>more_vert</mat-icon>\n             </button>\n-            <!-- <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n+            <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n                 <button mat-menu-item>Expand</button>\n                 <button mat-menu-item>Remove</button>\n             </mat-menu> -->\n         </mat-card-title>\n"
+                }
+            ],
+            "date": 1703577330377,
+            "name": "Commit-0",
+            "content": "<!--card.component.html-->\n<mat-card class=\"dashboard-card\">\n    <mat-card-header>\n        <mat-card-title>\n            {{title}}\n            <button mat-icon-button class=\"more-button\" [matMenuTriggerFor]=\"menu\" aria-label=\"Toggle menu\">\n                <mat-icon>more_vert</mat-icon>\n            </button>\n            <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n                <button mat-menu-item>Expand</button>\n                <button mat-menu-item>Remove</button>\n            </mat-menu>\n        </mat-card-title>\n    </mat-card-header>\n    <mat-card-content class=\"dashboard-card-content\">\n        <ng-content></ng-content>\n    </mat-card-content>\n </mat-card>"
+        }
+    ]
+}

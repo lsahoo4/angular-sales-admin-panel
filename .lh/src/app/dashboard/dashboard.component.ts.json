@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/dashboard/dashboard.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1703577070235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703577500916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { MatButtonModule } from '@angular/material/button';\n import { MatCardModule } from '@angular/material/card';\n import { CommonModule } from '@angular/common';\n import { FormsModule } from '@angular/forms';\n+import { CardComponent } from '../card/card.component';\n \n @Component({\n   selector: 'app-dashboard',\n   templateUrl: './dashboard.component.html',\n@@ -20,31 +21,32 @@\n     MatIconModule,\n     MatButtonModule,\n     MatCardModule,\n     CommonModule,\n-    FormsModule\n+    FormsModule,\n+    CardComponent\n   ]\n })\n export class DashboardComponent {\n   private breakpointObserver = inject(BreakpointObserver);\n \n   /** Based on the screen size, switch from standard to one column per row */\n-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(\n+  cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(\n     map(({ matches }) => {\n       if (matches) {\n-        return [\n-          { title: 'Card 1', cols: 1, rows: 1 },\n-          { title: 'Card 2', cols: 1, rows: 1 },\n-          { title: 'Card 3', cols: 1, rows: 1 },\n-          { title: 'Card 4', cols: 1, rows: 1 }\n-        ];\n+        return {\n+          columns: 1,\n+          miniCard: { cols: 1, rows: 1 },\n+          chart: { cols: 1, rows: 2 },\n+          table: { cols: 1, rows: 4 },\n+        };\n       }\n-\n-      return [\n-        { title: 'Card 1', cols: 2, rows: 1 },\n-        { title: 'Card 2', cols: 1, rows: 1 },\n-        { title: 'Card 3', cols: 1, rows: 2 },\n-        { title: 'Card 4', cols: 1, rows: 1 }\n-      ];\n+ \n+     return {\n+        columns: 4,\n+        miniCard: { cols: 1, rows: 1 },\n+        chart: { cols: 2, rows: 2 },\n+        table: { cols: 4, rows: 4 },\n+      };\n     })\n   );\n }\n"
+                }
+            ],
+            "date": 1703577070235,
+            "name": "Commit-0",
+            "content": "import { Component, inject } from '@angular/core';\nimport { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';\nimport { map } from 'rxjs/operators';\nimport { MatGridListModule } from '@angular/material/grid-list';\nimport { MatMenuModule } from '@angular/material/menu';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\n\n@Component({\n  selector: 'app-dashboard',\n  templateUrl: './dashboard.component.html',\n  styleUrls: ['./dashboard.component.css'],\n  standalone: true,\n  imports: [\n    MatGridListModule,\n    MatMenuModule,\n    MatIconModule,\n    MatButtonModule,\n    MatCardModule,\n    CommonModule,\n    FormsModule\n  ]\n})\nexport class DashboardComponent {\n  private breakpointObserver = inject(BreakpointObserver);\n\n  /** Based on the screen size, switch from standard to one column per row */\n  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(\n    map(({ matches }) => {\n      if (matches) {\n        return [\n          { title: 'Card 1', cols: 1, rows: 1 },\n          { title: 'Card 2', cols: 1, rows: 1 },\n          { title: 'Card 3', cols: 1, rows: 1 },\n          { title: 'Card 4', cols: 1, rows: 1 }\n        ];\n      }\n\n      return [\n        { title: 'Card 1', cols: 2, rows: 1 },\n        { title: 'Card 2', cols: 1, rows: 1 },\n        { title: 'Card 3', cols: 1, rows: 2 },\n        { title: 'Card 4', cols: 1, rows: 1 }\n      ];\n    })\n  );\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/card/card.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703577330412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703577330412,
+            "name": "Commit-0",
+            "content": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatMenuModule } from '@angular/material/menu';\n\n@Component({\n  selector: 'app-card',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatIconModule,\n    MatMenuModule\n  ],\n  templateUrl: './card.component.html',\n  styleUrl: './card.component.css'\n})\nexport class CardComponent {\n  @Input() title: string = \"\";\n\n}\n"
+        }
+    ]
+}
