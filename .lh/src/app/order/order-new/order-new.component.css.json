@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/order/order-new/order-new.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704177845077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704178239520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+.full-width {\n+  width: 100%;\n+}\n+\n+.shipping-card {\n+  min-width: 120px;\n+  margin: 20px auto;\n+}\n+\n+.mat-radio-button {\n+  display: block;\n+  margin: 5px 0;\n+}\n+\n+.col:last-child {\n+  margin-right: 0;\n+}\n"
+                },
+                {
+                    "date": 1704178312872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,26 +14,10 @@\n \n .col:last-child {\n   margin-right: 0;\n }\n-.full-width {\n-  width: 100%;\n-}\n \n-.shipping-card {\n-  min-width: 120px;\n-  margin: 20px auto;\n-}\n-\n-.mat-radio-button {\n-  display: block;\n-  margin: 5px 0;\n-}\n .right-button {\n   position: absolute;\n   top: 16px;\n   right: 18px;\n }\n-\n-.col:last-child {\n-  margin-right: 0;\n-}\n"
+                }
+            ],
+            "date": 1704177845077,
+            "name": "Commit-0",
+            "content": ".full-width {\n  width: 100%;\n}\n\n.shipping-card {\n  min-width: 120px;\n  margin: 20px auto;\n}\n\n.mat-radio-button {\n  display: block;\n  margin: 5px 0;\n}\n.right-button {\n  position: absolute;\n  top: 16px;\n  right: 18px;\n}\n\n.col:last-child {\n  margin-right: 0;\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/navbar/navbar.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703652995118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703652995118,
+            "name": "Commit-0",
+            "content": ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 200px;\n}\n\n.sidenav .mat-toolbar {\n  background: inherit;\n}\n\n.mat-toolbar.mat-primary {\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n.flex-spacer {\n  flex: 1 1 auto;\n}\n.username {\n  margin-right: 10px;\n}\n\n.logout-icon {\n  font-size: 15px;\n  cursor: pointer;\n}\n"
+        }
+    ]
+}

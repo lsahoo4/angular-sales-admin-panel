@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/charts/annual-sales-chart/annual-sales-chart.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703582720072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703651294879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n-import { Component } from '@angular/core';\n-import { ChartData, ChartOptions, ChartType, Color } from 'chart.js';\n-import { NgChartsModule } from 'ng2-charts';\n+import { Component, ViewChild } from '@angular/core';\n+import { Chart, ChartConfiguration, ChartEvent, ChartOptions, ChartType } from 'chart.js';\n+import { BaseChartDirective, NgChartsModule } from 'ng2-charts';\n \n+import Annotation from 'chartjs-plugin-annotation';\n+\n @Component({\n   selector: 'app-annual-sales-chart',\n   templateUrl: './annual-sales-chart.component.html',\n   styleUrls: ['./annual-sales-chart.component.css'],\n@@ -10,30 +12,31 @@\n   imports: [ NgChartsModule ]\n })\n export class AnnualSalesChartComponent {\n \n-  public salesChartData: any[] = [\n-    { data: [], label: 'Total Sales' },\n-  ];\n+  constructor() {\n+    Chart.register(Annotation);\n+  }\n \n-  public salesChartLabels: any[] = [];\n-  \n-  public lineChartData: ChartData[] = [\n-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },\n-  ];\n-  \n-  public lineChartLabels: any[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];\n-  public lineChartOptions: ChartOptions = {\n-    responsive: true,\n+  public lineChartData: ChartConfiguration<'line'>['data'] = {\n+    labels: [\n+      'January',\n+      'February',\n+      'March',\n+      'April',\n+      'May',\n+      'June',\n+      'July'\n+    ],\n+    datasets: [\n+      {\n+        data: [ 65, 59, 80, 81, 56, 55, 40 ]\n+      }\n+    ]\n   };\n-  // public lineChartColors: Color[] = [\n-  //   {\n-  //     borderColor: 'black',\n-  //     backgroundColor: 'rgba(255,0,0,0.3)',\n-  //   },\n-  // ];\n+  public lineChartOptions: ChartOptions<'line'> = {\n+    responsive: false\n+  };\n+\n+  public lineChartType: ChartType = 'line';\n   public lineChartLegend = true;\n-  public lineChartType: ChartType = 'line';\n-  public lineChartPlugins = [];\n-\n-  constructor() { }\n }\n"
+                },
+                {
+                    "date": 1703652554867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       'July'\n     ],\n     datasets: [\n       {\n-        data: [ 65, 59, 80, 81, 56, 55, 40 ]\n+        data: [ 3500, 2000, 4000, 5000, 4005, 5550, 6000 ]\n       }\n     ]\n   };\n   public lineChartOptions: ChartOptions<'line'> = {\n"
+                },
+                {
+                    "date": 1703652727543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n     ],\n     datasets: [\n       {\n         data: [ 3500, 2000, 4000, 5000, 4005, 5550, 6000 ]\n-      }\n-    ]\n+      },\n+    ],\n   };\n   public lineChartOptions: ChartOptions<'line'> = {\n     responsive: false\n   };\n"
+                }
+            ],
+            "date": 1703582720072,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { ChartData, ChartOptions, ChartType, Color } from 'chart.js';\nimport { NgChartsModule } from 'ng2-charts';\n\n@Component({\n  selector: 'app-annual-sales-chart',\n  templateUrl: './annual-sales-chart.component.html',\n  styleUrls: ['./annual-sales-chart.component.css'],\n  standalone: true,\n  imports: [ NgChartsModule ]\n})\nexport class AnnualSalesChartComponent {\n\n  public salesChartData: any[] = [\n    { data: [], label: 'Total Sales' },\n  ];\n\n  public salesChartLabels: any[] = [];\n  \n  public lineChartData: ChartData[] = [\n    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },\n  ];\n  \n  public lineChartLabels: any[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];\n  public lineChartOptions: ChartOptions = {\n    responsive: true,\n  };\n  // public lineChartColors: Color[] = [\n  //   {\n  //     borderColor: 'black',\n  //     backgroundColor: 'rgba(255,0,0,0.3)',\n  //   },\n  // ];\n  public lineChartLegend = true;\n  public lineChartType: ChartType = 'line';\n  public lineChartPlugins = [];\n\n  constructor() { }\n}\n"
+        }
+    ]
+}

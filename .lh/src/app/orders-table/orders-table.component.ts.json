@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/orders-table/orders-table.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1703653510227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703653820421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,27 @@\n import { MatTableModule, MatTable } from '@angular/material/table';\n import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';\n import { MatSortModule, MatSort } from '@angular/material/sort';\n import { OrdersTableDataSource, OrdersTableItem } from './orders-table-datasource';\n+import { MatChipsModule } from '@angular/material/chips';\n+import { FormsModule } from '@angular/forms';\n+import { CommonModule } from '@angular/common';\n+import { MatListModule } from '@angular/material/list';\n \n @Component({\n   selector: 'app-orders-table',\n   templateUrl: './orders-table.component.html',\n   styleUrls: ['./orders-table.component.css'],\n   standalone: true,\n-  imports: [MatTableModule, MatPaginatorModule, MatSortModule]\n+  imports: [\n+    MatTableModule,\n+    MatPaginatorModule,\n+    MatSortModule,\n+    MatChipsModule,\n+    MatListModule,\n+    FormsModule,\n+    CommonModule\n+  ]\n })\n export class OrdersTableComponent implements AfterViewInit, OnInit {\n   @ViewChild(MatPaginator) paginator!: MatPaginator;\n   @ViewChild(MatSort) sort!: MatSort;\n"
+                },
+                {
+                    "date": 1703653864284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import { MatChipsModule } from '@angular/material/chips';\n import { FormsModule } from '@angular/forms';\n import { CommonModule } from '@angular/common';\n import { MatListModule } from '@angular/material/list';\n+import { BrowserModule } from '@angular/platform-browser';\n \n @Component({\n   selector: 'app-orders-table',\n   templateUrl: './orders-table.component.html',\n@@ -19,9 +20,10 @@\n     MatSortModule,\n     MatChipsModule,\n     MatListModule,\n     FormsModule,\n-    CommonModule\n+    CommonModule,\n+    BrowserModule\n   ]\n })\n export class OrdersTableComponent implements AfterViewInit, OnInit {\n   @ViewChild(MatPaginator) paginator!: MatPaginator;\n"
+                },
+                {
+                    "date": 1703653951361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n import { MatChipsModule } from '@angular/material/chips';\n import { FormsModule } from '@angular/forms';\n import { CommonModule } from '@angular/common';\n import { MatListModule } from '@angular/material/list';\n-import { BrowserModule } from '@angular/platform-browser';\n \n @Component({\n   selector: 'app-orders-table',\n   templateUrl: './orders-table.component.html',\n@@ -20,10 +19,9 @@\n     MatSortModule,\n     MatChipsModule,\n     MatListModule,\n     FormsModule,\n-    CommonModule,\n-    BrowserModule\n+    CommonModule\n   ]\n })\n export class OrdersTableComponent implements AfterViewInit, OnInit {\n   @ViewChild(MatPaginator) paginator!: MatPaginator;\n"
+                },
+                {
+                    "date": 1703654025580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,7 @@\n     this.table.dataSource = this.dataSource;\n   }\n \n   ngOnInit(): void {\n-    throw new Error('Method not implemented.');\n+    // throw new Error('Method not implemented.');\n   }\n }\n"
+                }
+            ],
+            "date": 1703653510227,
+            "name": "Commit-0",
+            "content": "import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';\nimport { MatTableModule, MatTable } from '@angular/material/table';\nimport { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';\nimport { MatSortModule, MatSort } from '@angular/material/sort';\nimport { OrdersTableDataSource, OrdersTableItem } from './orders-table-datasource';\n\n@Component({\n  selector: 'app-orders-table',\n  templateUrl: './orders-table.component.html',\n  styleUrls: ['./orders-table.component.css'],\n  standalone: true,\n  imports: [MatTableModule, MatPaginatorModule, MatSortModule]\n})\nexport class OrdersTableComponent implements AfterViewInit, OnInit {\n  @ViewChild(MatPaginator) paginator!: MatPaginator;\n  @ViewChild(MatSort) sort!: MatSort;\n  @ViewChild(MatTable) table!: MatTable<OrdersTableItem>;\n  dataSource = new OrdersTableDataSource();\n  dataLength: number = 0;\n  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */\n  displayedColumns = [\n    \"id\",\n    \"date\",\n    \"name\",\n    \"status\",\n    \"orderTotal\",\n    \"paymentMode\",\n  ];\n\n  ngAfterViewInit(): void {\n    this.dataSource.sort = this.sort;\n    this.dataSource.paginator = this.paginator;\n    this.table.dataSource = this.dataSource;\n  }\n\n  ngOnInit(): void {\n    throw new Error('Method not implemented.');\n  }\n}\n"
+        }
+    ]
+}

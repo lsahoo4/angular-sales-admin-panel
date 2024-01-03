@@ -1,0 +1,26 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703578633772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703578752522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,8 @@\n     \"karma-chrome-launcher\": \"~3.2.0\",\n     \"karma-coverage\": \"~2.2.0\",\n     \"karma-jasmine\": \"~5.1.0\",\n     \"karma-jasmine-html-reporter\": \"~2.1.0\",\n+    \"ng2-charts-schematics\": \"^0.1.7\",\n     \"typescript\": \"~5.2.2\"\n   }\n }\n"
+                },
+                {
+                    "date": 1704215089548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,23 +6,28 @@\n     \"start\": \"ng serve\",\n     \"build\": \"ng build\",\n     \"watch\": \"ng build --watch --configuration development\",\n     \"test\": \"ng test\",\n-    \"lint\": \"ng lint\"\n+    \"lint\": \"ng lint\",\n+    \"lite\" : \"lite-server\"\n   },\n   \"private\": true,\n   \"dependencies\": {\n     \"@angular/animations\": \"^17.0.0\",\n     \"@angular/cdk\": \"^17.0.4\",\n     \"@angular/common\": \"^17.0.0\",\n     \"@angular/compiler\": \"^17.0.0\",\n     \"@angular/core\": \"^17.0.0\",\n+    \"@angular/flex-layout\": \"^15.0.0-beta.42\",\n     \"@angular/forms\": \"^17.0.0\",\n     \"@angular/material\": \"^17.0.4\",\n     \"@angular/platform-browser\": \"^17.0.0\",\n     \"@angular/platform-browser-dynamic\": \"^17.0.0\",\n     \"@angular/router\": \"^17.0.0\",\n+    \"@ng-bootstrap/ng-bootstrap\": \"^16.0.0\",\n     \"chart.js\": \"^4.4.1\",\n+    \"chartjs-plugin-annotation\": \"^3.0.1\",\n+    \"chartjs-plugin-datalabels\": \"^2.2.0\",\n     \"ng2-charts\": \"^5.0.4\",\n     \"rxjs\": \"~7.8.0\",\n     \"tslib\": \"^2.3.0\",\n     \"zone.js\": \"~0.14.2\"\n@@ -45,8 +50,9 @@\n     \"karma-chrome-launcher\": \"~3.2.0\",\n     \"karma-coverage\": \"~2.2.0\",\n     \"karma-jasmine\": \"~5.1.0\",\n     \"karma-jasmine-html-reporter\": \"~2.1.0\",\n+    \"lite-server\": \"^2.6.1\",\n     \"ng2-charts-schematics\": \"^0.1.7\",\n     \"typescript\": \"~5.2.2\"\n   }\n }\n"
+                }
+            ],
+            "date": 1703578633772,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"store-admin-panel\",\n  \"version\": \"0.0.0\",\n  \"scripts\": {\n    \"ng\": \"ng\",\n    \"start\": \"ng serve\",\n    \"build\": \"ng build\",\n    \"watch\": \"ng build --watch --configuration development\",\n    \"test\": \"ng test\",\n    \"lint\": \"ng lint\"\n  },\n  \"private\": true,\n  \"dependencies\": {\n    \"@angular/animations\": \"^17.0.0\",\n    \"@angular/cdk\": \"^17.0.4\",\n    \"@angular/common\": \"^17.0.0\",\n    \"@angular/compiler\": \"^17.0.0\",\n    \"@angular/core\": \"^17.0.0\",\n    \"@angular/forms\": \"^17.0.0\",\n    \"@angular/material\": \"^17.0.4\",\n    \"@angular/platform-browser\": \"^17.0.0\",\n    \"@angular/platform-browser-dynamic\": \"^17.0.0\",\n    \"@angular/router\": \"^17.0.0\",\n    \"chart.js\": \"^4.4.1\",\n    \"ng2-charts\": \"^5.0.4\",\n    \"rxjs\": \"~7.8.0\",\n    \"tslib\": \"^2.3.0\",\n    \"zone.js\": \"~0.14.2\"\n  },\n  \"devDependencies\": {\n    \"@angular-devkit/build-angular\": \"^17.0.7\",\n    \"@angular-eslint/builder\": \"17.0.0-alpha.0\",\n    \"@angular-eslint/eslint-plugin\": \"17.0.0-alpha.0\",\n    \"@angular-eslint/eslint-plugin-template\": \"17.0.0-alpha.0\",\n    \"@angular-eslint/schematics\": \"^17.1.1\",\n    \"@angular-eslint/template-parser\": \"17.0.0-alpha.0\",\n    \"@angular/cli\": \"^17.0.7\",\n    \"@angular/compiler-cli\": \"^17.0.0\",\n    \"@types/jasmine\": \"~5.1.0\",\n    \"@typescript-eslint/eslint-plugin\": \"6.10.0\",\n    \"@typescript-eslint/parser\": \"6.10.0\",\n    \"eslint\": \"^8.53.0\",\n    \"jasmine-core\": \"~5.1.0\",\n    \"karma\": \"~6.4.0\",\n    \"karma-chrome-launcher\": \"~3.2.0\",\n    \"karma-coverage\": \"~2.2.0\",\n    \"karma-jasmine\": \"~5.1.0\",\n    \"karma-jasmine-html-reporter\": \"~2.1.0\",\n    \"typescript\": \"~5.2.2\"\n  }\n}\n"
+        }
+    ]
+}

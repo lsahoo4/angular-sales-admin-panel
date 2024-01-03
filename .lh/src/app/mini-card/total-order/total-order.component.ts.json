@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/mini-card/total-order/total-order.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703660516823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703660516823,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-total-order',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatIconModule\n  ],\n  templateUrl: './total-order.component.html',\n  styleUrl: './total-order.component.css'\n})\nexport class TotalOrderComponent {\n\n}\n"
+        }
+    ]
+}

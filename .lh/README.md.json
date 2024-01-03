@@ -1,0 +1,38 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1703664520685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703664541460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n ## generate side nav\n   ng generate @angular/material:navigation nav\n \n-## control flow \n+## for control flow angular v17\n   ng g @angular/core:control-flow\n \n ## generate mateial table\n   ng generate @angular/material:table orders-table\n"
+                },
+                {
+                    "date": 1703664593938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,10 @@\n ## generate mateial table\n   ng generate @angular/material:table orders-table\n \n ## generate- charts\n+## ng generate ng2-charts:<chart-type> <chart-name>\n+\n ng generate ng2-charts:radar charts/product-sales-chart\n ng generate ng2-charts:pie charts/sales-traffic-chart\n ng generate ng2-charts:line charts/annual-sales-chart \n ng generate ng2-charts:bar charts/store-sessions-chart\n"
+                },
+                {
+                    "date": 1703664607150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n ## generate mateial table\n   ng generate @angular/material:table orders-table\n \n ## generate- charts\n-## ng generate ng2-charts:<chart-type> <chart-name>\n+ * ng generate ng2-charts:<chart-type> <chart-name>\n \n ng generate ng2-charts:radar charts/product-sales-chart\n ng generate ng2-charts:pie charts/sales-traffic-chart\n ng generate ng2-charts:line charts/annual-sales-chart \n"
+                },
+                {
+                    "date": 1703664631475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,17 +31,17 @@\n \n ## generate side nav\n   ng generate @angular/material:navigation nav\n \n-## for control flow angular v17\n-  ng g @angular/core:control-flow\n-\n-## generate mateial table\n-  ng generate @angular/material:table orders-table\n-\n ## generate- charts\n  * ng generate ng2-charts:<chart-type> <chart-name>\n \n ng generate ng2-charts:radar charts/product-sales-chart\n ng generate ng2-charts:pie charts/sales-traffic-chart\n ng generate ng2-charts:line charts/annual-sales-chart \n ng generate ng2-charts:bar charts/store-sessions-chart\n+\n+## generate mateial table\n+  ng generate @angular/material:table orders-table\n+\n+## for control flow angular v17\n+  ng g @angular/core:control-flow\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703664720177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,27 @@\n # StoreAdminPanel\n \n This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.\n \n+## command to run generate templates\n+\n+## generate side nav\n+  ng generate @angular/material:navigation nav\n+\n+## generate- charts\n+ * ng generate ng2-charts:<chart-type> <chart-name>\n+\n+ng generate ng2-charts:radar charts/product-sales-chart\n+ng generate ng2-charts:pie charts/sales-traffic-chart\n+ng generate ng2-charts:line charts/annual-sales-chart \n+ng generate ng2-charts:bar charts/store-sessions-chart\n+\n+## generate mateial table\n+  ng generate @angular/material:table orders-table\n+\n+## for control flow angular v17\n+  ng g @angular/core:control-flow\n+\n ## Development server\n \n Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.\n \n@@ -23,25 +42,5 @@\n Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.\n \n ## Further help\n \n-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.\n-\n-\n-## command to run generate templates\n-\n-## generate side nav\n-  ng generate @angular/material:navigation nav\n-\n-## generate- charts\n- * ng generate ng2-charts:<chart-type> <chart-name>\n-\n-ng generate ng2-charts:radar charts/product-sales-chart\n-ng generate ng2-charts:pie charts/sales-traffic-chart\n-ng generate ng2-charts:line charts/annual-sales-chart \n-ng generate ng2-charts:bar charts/store-sessions-chart\n-\n-## generate mateial table\n-  ng generate @angular/material:table orders-table\n-\n-## for control flow angular v17\n-  ng g @angular/core:control-flow\n\\ No newline at end of file\n+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703664520685,
+            "name": "Commit-0",
+            "content": "# StoreAdminPanel\n\nThis project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.\n\n## Development server\n\nRun `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.\n\n## Code scaffolding\n\nRun `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.\n\n## Build\n\nRun `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.\n\n## Running unit tests\n\nRun `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).\n\n## Running end-to-end tests\n\nRun `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.\n\n## Further help\n\nTo get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.\n\n\n## command to run generate templates\n\n## generate side nav\n  ng generate @angular/material:navigation nav\n\n## control flow \n  ng g @angular/core:control-flow\n\n## generate mateial table\n  ng generate @angular/material:table orders-table\n\n## generate- charts\nng generate ng2-charts:radar charts/product-sales-chart\nng generate ng2-charts:pie charts/sales-traffic-chart\nng generate ng2-charts:line charts/annual-sales-chart \nng generate ng2-charts:bar charts/store-sessions-chart\n"
+        }
+    ]
+}

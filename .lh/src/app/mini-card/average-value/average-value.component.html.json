@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/app/mini-card/average-value/average-value.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1703660516802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703660970799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_tag</mat-icon>\n+            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                },
+                {
+                    "date": 1703661340476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_change</mat-icon>\n+            <span class='material-icons-outlined'>price_change</span>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                },
+                {
+                    "date": 1703661370826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <span class='material-icons-outlined'>price_change</span>\n+            <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                },
+                {
+                    "date": 1703661439230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n+            <span class='material-icons-outlined'>price_change</span>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                },
+                {
+                    "date": 1703661469216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+      <!-- 2nd Card: Average Order Value -->\n+      <mat-card class=\"dashboard-card\">\n+        <mat-card-header>\n+          <div style=\"display: flex; align-items: center;\">\n+            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_change</mat-icon>\n+            <h1 style=\"margin-left: 10px;\">$465</h1>\n+          </div>\n+        </mat-card-header>\n+        <mat-card-content class=\"dashboard-card-content\">\n+          <p style=\"text-align: center;\">Average Order Value</p>\n+          <p class=\"dashboard-decrease\">-25.44% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n+        </mat-card-content>\n+      </mat-card>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703661613158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,13 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_change</mat-icon>\n+            <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n           <p style=\"text-align: center;\">Average Order Value</p>\n           <p class=\"dashboard-decrease\">-25.44% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n         </mat-card-content>\n-      </mat-card>\n-      <!-- 2nd Card: Average Order Value -->\n-      <mat-card class=\"dashboard-card\">\n-        <mat-card-header>\n-          <div style=\"display: flex; align-items: center;\">\n-            <span class='material-icons-outlined'>price_change</span>\n-            <h1 style=\"margin-left: 10px;\">$465</h1>\n-          </div>\n-        </mat-card-header>\n-        <mat-card-content class=\"dashboard-card-content\">\n-          <p style=\"text-align: center;\">Average Order Value</p>\n-          <p class=\"dashboard-decrease\">-25.44% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n-        </mat-card-content>\n       </mat-card>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703661672614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n+            <mat-icon fontSet=\"material-icons-outlined\">edit</mat-icon>\n             <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n"
+                },
+                {
+                    "date": 1703661773677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon fontSet=\"material-icons-outlined\">edit</mat-icon>\n+            <mat-icon fontSet=\"material-icons-outlined\">edit_outlined</mat-icon>\n             <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n"
+                },
+                {
+                    "date": 1703662188804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n       <!-- 2nd Card: Average Order Value -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon fontSet=\"material-icons-outlined\">edit_outlined</mat-icon>\n-            <mat-icon class=\"dashboard-icon material-icons-outlined\" mat-card-avatar>price_change</mat-icon>\n+            <mat-icon class=\"dashboard-icon outlined-icon\" mat-card-avatar>price_change</mat-icon>\n             <h1 style=\"margin-left: 10px;\">$465</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                }
+            ],
+            "date": 1703660516802,
+            "name": "Commit-0",
+            "content": "      <!-- 2nd Card: Average Order Value -->\n      <mat-card class=\"dashboard-card\">\n        <mat-card-header>\n          <div style=\"display: flex; align-items: center;\">\n            <mat-icon class=\"dashboard-icon\" mat-card-avatar>price_tag</mat-icon>\n            <h1 style=\"margin-left: 10px;\">$465</h1>\n          </div>\n        </mat-card-header>\n        <mat-card-content class=\"dashboard-card-content\">\n          <p style=\"text-align: center;\">Average Order Value</p>\n          <p class=\"dashboard-decrease\">-25.44% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n        </mat-card-content>\n      </mat-card>"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "sourceFile": "src/app/mini-card/mini-card.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1703656020527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703656054044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,21 +11,10 @@\n     left: 15px;\r\n     right: 15px;\r\n     bottom: 15px;\r\n  }\r\n+\r\n  \r\n- \r\n- .dashboard-card-content {\r\n-    text-align: center;\r\n-    flex-grow: 1;\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    max-height: 100%;\r\n-    justify-content: center;\r\n-    align-items: stretch;\r\n- }\r\n- \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703656782202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,30 @@\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- }\n\\ No newline at end of file\n+ }\r\n+\r\n+ .dashboard-card {\r\n+    margin: 10px;\r\n+    flex: 1 1 0;\r\n+  }\r\n+  \r\n+  .dashboard-icon {\r\n+    color: white;\r\n+    background-color: transparent;\r\n+  }\r\n+  \r\n+  .dashboard-content {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+  }\r\n+  \r\n+  .dashboard-increase {\r\n+    color: green;\r\n+  }\r\n+  \r\n+  .dashboard-decrease {\r\n+    color: red;\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703656943655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n /*card.component.css*/\r\n-.more-button {\r\n+/* .more-button {\r\n     position: absolute;\r\n     top: 5px;\r\n     right: 10px;\r\n  }\r\n@@ -16,9 +16,9 @@\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- }\r\n+ } */\r\n \r\n  .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n"
+                },
+                {
+                    "date": 1703657716685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n /*card.component.css*/\r\n-/* .more-button {\r\n+.more-button {\r\n     position: absolute;\r\n     top: 5px;\r\n     right: 10px;\r\n  }\r\n@@ -16,9 +16,9 @@\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- } */\r\n+ }\r\n \r\n  .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n"
+                },
+                {
+                    "date": 1703657727068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,10 @@\n     position: absolute;\r\n     top: 5px;\r\n     right: 10px;\r\n  }\r\n- \r\n- .dashboard-card {\r\n-    position: absolute;\r\n-    top: 15px;\r\n-    left: 15px;\r\n-    right: 15px;\r\n-    bottom: 15px;\r\n- }\r\n \r\n+\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703657782009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     display: flex;\r\n     flex-direction: column;\r\n  }\r\n \r\n- .dashboard-card {\r\n+ /* .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n   }\r\n   \r\n@@ -34,5 +34,5 @@\n   }\r\n   \r\n   .dashboard-decrease {\r\n     color: red;\r\n-  }\n\\ No newline at end of file\n+  } */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703657790357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,38 +0,0 @@\n-/*card.component.css*/\r\n-.more-button {\r\n-    position: absolute;\r\n-    top: 5px;\r\n-    right: 10px;\r\n- }\r\n-\r\n-\r\n- \r\n- mat-card {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n- }\r\n-\r\n- /* .dashboard-card {\r\n-    margin: 10px;\r\n-    flex: 1 1 0;\r\n-  }\r\n-  \r\n-  .dashboard-icon {\r\n-    color: white;\r\n-    background-color: transparent;\r\n-  }\r\n-  \r\n-  .dashboard-content {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-  }\r\n-  \r\n-  .dashboard-increase {\r\n-    color: green;\r\n-  }\r\n-  \r\n-  .dashboard-decrease {\r\n-    color: red;\r\n-  } */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703657814794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+/*card.component.css*/\r\n+.more-button {\r\n+    position: absolute;\r\n+    top: 5px;\r\n+    right: 10px;\r\n+ }\r\n+ \r\n+ .dashboard-card {\r\n+    position: absolute;\r\n+    top: 15px;\r\n+    left: 15px;\r\n+    right: 15px;\r\n+    bottom: 15px;\r\n+ }\r\n+ \r\n+ \r\n+ .dashboard-card-content {\r\n+    text-align: center;\r\n+    flex-grow: 1;\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    max-height: 100%;\r\n+    justify-content: center;\r\n+    align-items: stretch;\r\n+ }\r\n+ \r\n+ mat-card {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+ }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703657842222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,9 @@\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- }\n\\ No newline at end of file\n+ }\r\n+\r\n+ .dashboard-increase {\r\n+    color: green;\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703657855511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,9 @@\n  }\r\n \r\n  .dashboard-increase {\r\n     color: green;\r\n+  }\r\n+\r\n+  .dashboard-decrease {\r\n+    color: red;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703657873947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,9 @@\n   }\r\n \r\n   .dashboard-decrease {\r\n     color: red;\r\n+  }\r\n+  .dashboard-icon {\r\n+    color: white;\r\n+    background-color: transparent;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703658033553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     right: 15px;\r\n     bottom: 15px;\r\n  }\r\n  \r\n- \r\n+/*  \r\n  .dashboard-card-content {\r\n     text-align: center;\r\n     flex-grow: 1;\r\n     display: flex;\r\n@@ -22,9 +22,9 @@\n     align-items: center;\r\n     max-height: 100%;\r\n     justify-content: center;\r\n     align-items: stretch;\r\n- }\r\n+ } */\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703658038629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     right: 15px;\r\n     bottom: 15px;\r\n  }\r\n  \r\n-/*  \r\n+ \r\n  .dashboard-card-content {\r\n     text-align: center;\r\n     flex-grow: 1;\r\n     display: flex;\r\n@@ -22,9 +22,9 @@\n     align-items: center;\r\n     max-height: 100%;\r\n     justify-content: center;\r\n     align-items: stretch;\r\n- } */\r\n+ }\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703658090805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,18 +13,25 @@\n     bottom: 15px;\r\n  }\r\n  \r\n  \r\n- .dashboard-card-content {\r\n+ /* .dashboard-card-content {\r\n     text-align: center;\r\n     flex-grow: 1;\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     max-height: 100%;\r\n     justify-content: center;\r\n     align-items: stretch;\r\n- }\r\n+ } */\r\n+\r\n+ .dashboard-content {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+  }\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703658240733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,20 +31,21 @@\n     align-items: center;\r\n     justify-content: center;\r\n   }\r\n  \r\n- mat-card {\r\n+ /* mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- }\r\n+ } */\r\n \r\n  .dashboard-increase {\r\n     color: green;\r\n   }\r\n \r\n   .dashboard-decrease {\r\n     color: red;\r\n   }\r\n+\r\n   .dashboard-icon {\r\n     color: white;\r\n     background-color: transparent;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703658250464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,11 @@\n     right: 10px;\r\n  }\r\n  \r\n  .dashboard-card {\r\n-    position: absolute;\r\n-    top: 15px;\r\n-    left: 15px;\r\n-    right: 15px;\r\n-    bottom: 15px;\r\n- }\r\n+    margin: 10px;\r\n+    flex: 1 1 0;\r\n+  }\r\n  \r\n  \r\n  /* .dashboard-card-content {\r\n     text-align: center;\r\n@@ -31,21 +28,21 @@\n     align-items: center;\r\n     justify-content: center;\r\n   }\r\n  \r\n- /* mat-card {\r\n+ mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n- } */\r\n+ }\r\n \r\n  .dashboard-increase {\r\n     color: green;\r\n   }\r\n \r\n   .dashboard-decrease {\r\n     color: red;\r\n   }\r\n-\r\n+  \r\n   .dashboard-icon {\r\n     color: white;\r\n     background-color: transparent;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703658497567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,19 @@\n     right: 10px;\r\n  }\r\n  \r\n  .dashboard-card {\r\n+    position: absolute;\r\n+    top: 15px;\r\n+    left: 15px;\r\n+    right: 15px;\r\n+    bottom: 15px;\r\n+ }\r\n+\r\n+ .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n+    position: absolute;\r\n   }\r\n  \r\n  \r\n  /* .dashboard-card-content {\r\n"
+                },
+                {
+                    "date": 1703658504144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n     top: 5px;\r\n     right: 10px;\r\n  }\r\n  \r\n- .dashboard-card {\r\n+ /* .dashboard-card {\r\n     position: absolute;\r\n     top: 15px;\r\n     left: 15px;\r\n     right: 15px;\r\n     bottom: 15px;\r\n- }\r\n+ } */\r\n \r\n  .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n"
+                },
+                {
+                    "date": 1703658509705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,20 +4,20 @@\n     top: 5px;\r\n     right: 10px;\r\n  }\r\n  \r\n- /* .dashboard-card {\r\n+ .dashboard-card {\r\n     position: absolute;\r\n     top: 15px;\r\n     left: 15px;\r\n     right: 15px;\r\n     bottom: 15px;\r\n- } */\r\n+ }\r\n \r\n  .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n-    position: absolute;\r\n+    \r\n   }\r\n  \r\n  \r\n  /* .dashboard-card-content {\r\n"
+                },
+                {
+                    "date": 1703658519227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,13 @@\n     left: 15px;\r\n     right: 15px;\r\n     bottom: 15px;\r\n  }\r\n-\r\n+/* \r\n  .dashboard-card {\r\n     margin: 10px;\r\n     flex: 1 1 0;\r\n-    \r\n-  }\r\n+  } */\r\n  \r\n  \r\n  /* .dashboard-card-content {\r\n     text-align: center;\r\n"
+                },
+                {
+                    "date": 1703658552253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,25 +18,25 @@\n     flex: 1 1 0;\r\n   } */\r\n  \r\n  \r\n- /* .dashboard-card-content {\r\n+ .dashboard-card-content {\r\n     text-align: center;\r\n     flex-grow: 1;\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     max-height: 100%;\r\n     justify-content: center;\r\n     align-items: stretch;\r\n- } */\r\n+ }\r\n \r\n- .dashboard-content {\r\n+ /* .dashboard-content {\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     justify-content: center;\r\n-  }\r\n+  } */\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703658564356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,25 +18,25 @@\n     flex: 1 1 0;\r\n   } */\r\n  \r\n  \r\n- .dashboard-card-content {\r\n+ /* .dashboard-card-content {\r\n     text-align: center;\r\n     flex-grow: 1;\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     max-height: 100%;\r\n     justify-content: center;\r\n     align-items: stretch;\r\n- }\r\n+ } */\r\n \r\n- /* .dashboard-content {\r\n+ .dashboard-content {\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n     justify-content: center;\r\n-  } */\r\n+  }\r\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1703658595795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,12 @@\n     display: flex;\r\n     flex-direction: column;\r\n  }\r\n \r\n+ .mat-mdc-card-header {\r\n+    padding: 0px !important;\r\n+ }\r\n+\r\n  .dashboard-increase {\r\n     color: green;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1703658783713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,12 +47,14 @@\n  }\r\n \r\n  .dashboard-increase {\r\n     color: green;\r\n+    text-align: center;\r\n   }\r\n \r\n   .dashboard-decrease {\r\n     color: red;\r\n+    text-align: center;\r\n   }\r\n   \r\n   .dashboard-icon {\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1703658868444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,9 @@\n  \r\n  mat-card {\r\n     display: flex;\r\n     flex-direction: column;\r\n+    align-items: center;\r\n  }\r\n \r\n  .mat-mdc-card-header {\r\n     padding: 0px !important;\r\n"
+                },
+                {
+                    "date": 1703659018133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,5 +59,6 @@\n   \r\n   .dashboard-icon {\r\n     color: white;\r\n     background-color: transparent;\r\n+    margin-top: 13px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703659040288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,6 +59,6 @@\n   \r\n   .dashboard-icon {\r\n     color: white;\r\n     background-color: transparent;\r\n-    margin-top: 13px;\r\n+    margin-top: 25px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703659084251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,5 +60,6 @@\n   .dashboard-icon {\r\n     color: white;\r\n     background-color: transparent;\r\n     margin-top: 25px;\r\n+    width: 30px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703659218152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,5 +61,8 @@\n     color: white;\r\n     background-color: transparent;\r\n     margin-top: 25px;\r\n     width: 30px;\r\n+  }\r\n+  ._p {\r\n+    color: white;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703659996977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,5 +64,11 @@\n     width: 30px;\r\n   }\r\n   ._p {\r\n     color: white;\r\n-  }\n\\ No newline at end of file\n+  }\r\n+\r\n+  .dashboard-container {\r\n+    display: flex;\r\n+    justify-content: space-between; /* or any other layout property that suits your design */\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703660727980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,74 +0,0 @@\n-/*card.component.css*/\r\n-.more-button {\r\n-    position: absolute;\r\n-    top: 5px;\r\n-    right: 10px;\r\n- }\r\n- \r\n- .dashboard-card {\r\n-    position: absolute;\r\n-    top: 15px;\r\n-    left: 15px;\r\n-    right: 15px;\r\n-    bottom: 15px;\r\n- }\r\n-/* \r\n- .dashboard-card {\r\n-    margin: 10px;\r\n-    flex: 1 1 0;\r\n-  } */\r\n- \r\n- \r\n- /* .dashboard-card-content {\r\n-    text-align: center;\r\n-    flex-grow: 1;\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    max-height: 100%;\r\n-    justify-content: center;\r\n-    align-items: stretch;\r\n- } */\r\n-\r\n- .dashboard-content {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-  }\r\n- \r\n- mat-card {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n- }\r\n-\r\n- .mat-mdc-card-header {\r\n-    padding: 0px !important;\r\n- }\r\n-\r\n- .dashboard-increase {\r\n-    color: green;\r\n-    text-align: center;\r\n-  }\r\n-\r\n-  .dashboard-decrease {\r\n-    color: red;\r\n-    text-align: center;\r\n-  }\r\n-  \r\n-  .dashboard-icon {\r\n-    color: white;\r\n-    background-color: transparent;\r\n-    margin-top: 25px;\r\n-    width: 30px;\r\n-  }\r\n-  ._p {\r\n-    color: white;\r\n-  }\r\n-\r\n-  .dashboard-container {\r\n-    display: flex;\r\n-    justify-content: space-between; /* or any other layout property that suits your design */\r\n-  }\r\n-  \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703656020527,
+            "name": "Commit-0",
+            "content": "/*card.component.css*/\r\n.more-button {\r\n    position: absolute;\r\n    top: 5px;\r\n    right: 10px;\r\n }\r\n \r\n .dashboard-card {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    right: 15px;\r\n    bottom: 15px;\r\n }\r\n \r\n \r\n .dashboard-card-content {\r\n    text-align: center;\r\n    flex-grow: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: 100%;\r\n    justify-content: center;\r\n    align-items: stretch;\r\n }\r\n \r\n mat-card {\r\n    display: flex;\r\n    flex-direction: column;\r\n }"
+        }
+    ]
+}

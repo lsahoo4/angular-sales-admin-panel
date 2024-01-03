@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/charts/store-sessions-chart/store-sessions-chart.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703582720073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703651294882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { Component } from '@angular/core';\n-import { ChartOptions, ChartType } from 'chart.js';\n+import { ChartData, ChartOptions, ChartType } from 'chart.js';\n import { NgChartsModule } from 'ng2-charts';\n+import DataLabelsPlugin from 'chartjs-plugin-datalabels';\n \n @Component({\n   standalone: true,\n   selector: 'app-store-sessions-chart',\n@@ -11,19 +12,24 @@\n     NgChartsModule\n   ]\n })\n export class StoreSessionsChartComponent {\n-  public barChartOptions: ChartOptions = {\n-    responsive: true,\n+\n+  public barChartOptions: ChartOptions<'bar'> = {\n+    responsive: false\n   };\n+  \n   public barChartLabels: any[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];\n   public barChartType: ChartType = 'bar';\n   public barChartLegend = true;\n-  public barChartPlugins = [];\n+  public barChartPlugins = [ DataLabelsPlugin ];\n \n-  public barChartData: any[] = [\n-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },\n-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }\n-  ];\n+  public barChartData: ChartData<'bar'> = {\n+    labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],\n+    datasets: [\n+      { data: [65, 59, 80, 81, 56, 55, 40] },\n+      { data: [28, 48, 40, 19, 86, 27, 90] },\n+    ],\n+  };\n \n   constructor() {}\n }\n"
+                },
+                {
+                    "date": 1703652424704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,17 +17,17 @@\n   public barChartOptions: ChartOptions<'bar'> = {\n     responsive: false\n   };\n   \n-  public barChartLabels: any[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];\n+  public barChartLabels: any[] = ['Search', 'Direct', 'Social', 'Email', 'Unknown'];\n   public barChartType: ChartType = 'bar';\n   public barChartLegend = true;\n   public barChartPlugins = [ DataLabelsPlugin ];\n \n   public barChartData: ChartData<'bar'> = {\n-    labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],\n+    labels: this.barChartLabels,\n     datasets: [\n-      { data: [65, 59, 80, 81, 56, 55, 40] },\n+      { data: [400, 350, 250, 300, 100] },\n       { data: [28, 48, 40, 19, 86, 27, 90] },\n     ],\n   };\n \n"
+                },
+                {
+                    "date": 1703652433640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n \n   public barChartData: ChartData<'bar'> = {\n     labels: this.barChartLabels,\n     datasets: [\n-      { data: [400, 350, 250, 300, 100] },\n-      { data: [28, 48, 40, 19, 86, 27, 90] },\n+      { data: [400, 350, 250, 300, 100] }\n     ],\n   };\n \n   constructor() {}\n"
+                }
+            ],
+            "date": 1703582720073,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { ChartOptions, ChartType } from 'chart.js';\nimport { NgChartsModule } from 'ng2-charts';\n\n@Component({\n  standalone: true,\n  selector: 'app-store-sessions-chart',\n  templateUrl: './store-sessions-chart.component.html',\n  styleUrls: ['./store-sessions-chart.component.css'],\n  imports: [\n    NgChartsModule\n  ]\n})\nexport class StoreSessionsChartComponent {\n  public barChartOptions: ChartOptions = {\n    responsive: true,\n  };\n  public barChartLabels: any[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];\n  public barChartType: ChartType = 'bar';\n  public barChartLegend = true;\n  public barChartPlugins = [];\n\n  public barChartData: any[] = [\n    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },\n    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }\n  ];\n\n  constructor() {}\n}\n"
+        }
+    ]
+}

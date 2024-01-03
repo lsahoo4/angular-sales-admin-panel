@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     max-height: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: stretch;
  }
  
@@ -29,3 +29,14 @@
     display: flex;
     flex-direction: column;
  }
+
+ /* In your component's styles file (e.g., styles.css) */
+.expanded-card {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1000; /* Adjust the z-index as needed */
+ }
+ 

@@ -3,11 +3,55 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1703576987580,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703654001029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n \n-export const routes: Routes = [{ path: 'dashboard', component: DashboardComponent }];\n+export const routes: Routes = [\n+    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n+    { path: 'dashboard', component: DashboardComponent }\n+];\n"
+                },
+                {
+                    "date": 1703667081669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n+import { OrdersTableComponent } from './orders-table/orders-table.component';\n \n export const routes: Routes = [\n     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n-    { path: 'dashboard', component: DashboardComponent }\n+    { path: 'dashboard', component: DashboardComponent },\n+    { path: 'orders', component: OrdersTableComponent} \n ];\n"
+                },
+                {
+                    "date": 1703740382213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n import { OrdersTableComponent } from './orders-table/orders-table.component';\n+import { ProductComponent } from './product/product.component';\n \n export const routes: Routes = [\n     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n     { path: 'dashboard', component: DashboardComponent },\n-    { path: 'orders', component: OrdersTableComponent} \n+    { path: 'orders', component: OrdersTableComponent},\n+    {path: 'products', component: ProductComponent }\n ];\n"
+                },
+                {
+                    "date": 1703741180396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n import { OrdersTableComponent } from './orders-table/orders-table.component';\n-import { ProductComponent } from './product/product.component';\n+import { CustomerComponent } from './customer/customer.component';\n \n export const routes: Routes = [\n     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n     { path: 'dashboard', component: DashboardComponent },\n     { path: 'orders', component: OrdersTableComponent},\n-    {path: 'products', component: ProductComponent }\n+    { path: 'customers', component: CustomerComponent }\n ];\n"
+                },
+                {
+                    "date": 1703745101916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,14 @@\n import { OrdersTableComponent } from './orders-table/orders-table.component';\n import { CustomerComponent } from './customer/customer.component';\n \n export const routes: Routes = [\n-    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n+    { path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n     { path: 'dashboard', component: DashboardComponent },\n     { path: 'orders', component: OrdersTableComponent},\n-    { path: 'customers', component: CustomerComponent }\n+    { path: 'customers', component: CustomerComponent,\n+    children: [\n+        {\n+            \n+        }\n+    ] }\n ];\n"
+                },
+                {
+                    "date": 1703745183455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,6 @@\n export const routes: Routes = [\n     { path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n     { path: 'dashboard', component: DashboardComponent },\n     { path: 'orders', component: OrdersTableComponent},\n-    { path: 'customers', component: CustomerComponent,\n-    children: [\n-        {\n-            \n-        }\n-    ] }\n+    { path: 'customers', component: CustomerComponent }\n ];\n"
+                },
+                {
+                    "date": 1703746235826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n-import { OrdersTableComponent } from './orders-table/orders-table.component';\n+import { OrdersTableComponent } from './order/order-table/orders-table/orders-table.component';\n import { CustomerComponent } from './customer/customer.component';\n \n export const routes: Routes = [\n     { path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n"
+                },
+                {
+                    "date": 1703746672247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,25 @@\n import { Routes } from '@angular/router';\n import { DashboardComponent } from './dashboard/dashboard.component';\n import { OrdersTableComponent } from './order/order-table/orders-table/orders-table.component';\n-import { CustomerComponent } from './customer/customer.component';\n+import { CustomerTableComponent } from './customer/customer-table/customer-table.component';\n+import { CustomerNewComponent } from './customer/customer-new/customer-new.component';\n+import { OrderNewComponent } from './order/order-new/order-new.component';\n+import { ProductTableComponent } from './product/product-table/product-table.component';\n+import { ProductNewComponent } from './product/product-new/product-new.component';\n \n export const routes: Routes = [\n-    { path: '', redirectTo: 'dashboard', pathMatch: 'full'},\n+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },\n     { path: 'dashboard', component: DashboardComponent },\n-    { path: 'orders', component: OrdersTableComponent},\n-    { path: 'customers', component: CustomerComponent }\n+    {\n+        path: 'orders', component: OrdersTableComponent,\n+        children: [{ path: 'new', component: OrderNewComponent }]\n+    },\n+    {\n+        path: 'customers', component: CustomerTableComponent,\n+        children: [{ path: 'new', component: CustomerNewComponent }]\n+    },\n+    {\n+        path: 'products', component: ProductTableComponent,\n+        children: [{ path: 'new', component: ProductNewComponent }]\n+    }\n ];\n"
+                },
+                {
+                    "date": 1703750628595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n         path: 'orders', component: OrdersTableComponent,\n         children: [{ path: 'new', component: OrderNewComponent }]\n     },\n     {\n-        path: 'customers', component: CustomerTableComponent,\n+        path: 'customers',\n+        component: CustomerTableComponent,\n         children: [{ path: 'new', component: CustomerNewComponent }]\n     },\n     {\n         path: 'products', component: ProductTableComponent,\n"
+                },
+                {
+                    "date": 1703750758270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,12 @@\n         children: [{ path: 'new', component: OrderNewComponent }]\n     },\n     {\n         path: 'customers',\n-        component: CustomerTableComponent,\n-        children: [{ path: 'new', component: CustomerNewComponent }]\n+        children: [\n+            {path: '', component: CustomerTableComponent},\n+            { path: 'new', component: CustomerNewComponent }\n+        ]\n     },\n     {\n         path: 'products', component: ProductTableComponent,\n         children: [{ path: 'new', component: ProductNewComponent }]\n"
+                },
+                {
+                    "date": 1703750827859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,19 +10,25 @@\n export const routes: Routes = [\n     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },\n     { path: 'dashboard', component: DashboardComponent },\n     {\n-        path: 'orders', component: OrdersTableComponent,\n-        children: [{ path: 'new', component: OrderNewComponent }]\n+        path: 'orders',\n+        children: [\n+            { path: '', component: OrdersTableComponent},\n+            { path: 'new', component: OrderNewComponent }\n+        ]\n     },\n     {\n         path: 'customers',\n         children: [\n-            {path: '', component: CustomerTableComponent},\n+            { path: '', component: CustomerTableComponent},\n             { path: 'new', component: CustomerNewComponent }\n         ]\n     },\n     {\n-        path: 'products', component: ProductTableComponent,\n-        children: [{ path: 'new', component: ProductNewComponent }]\n+        path: 'products',\n+        children: [\n+            { path: '', component: ProductTableComponent },\n+            { path: 'new', component: ProductNewComponent }\n+        ]\n     }\n ];\n"
                 }
             ],
             "date": 1703576987580,

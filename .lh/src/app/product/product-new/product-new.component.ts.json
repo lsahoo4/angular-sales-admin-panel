@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/product/product-new/product-new.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1703753521010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703754515377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Component, inject } from '@angular/core';\n+import { Component, OnInit, inject } from '@angular/core';\n \n import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';\n import { MatInputModule } from '@angular/material/input';\n import { MatButtonModule } from '@angular/material/button';\n@@ -21,16 +21,21 @@\n     MatCardModule,\n     ReactiveFormsModule\n   ]\n })\n-export class ProductNewComponent {\n+export class ProductNewComponent implements OnInit {\n+\n   private fb = inject(FormBuilder);\n   addressForm = this.fb.group({\n     company: null,\n     productName: [null, Validators.required],\n     description: [null, Validators.required]\n   });\n \n+  ngOnInit(): void {\n+    //throw new Error('Method not implemented.');\n+  }\n+\n   onSubmit(): void {\n     alert('Thanks!');\n   }\n }\n"
+                },
+                {
+                    "date": 1703758538967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n })\n export class ProductNewComponent implements OnInit {\n \n   private fb = inject(FormBuilder);\n-  addressForm = this.fb.group({\n+  productForm = this.fb.group({\n     company: null,\n     productName: [null, Validators.required],\n     description: [null, Validators.required]\n   });\n"
+                },
+                {
+                    "date": 1703760316616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,8 @@\n     //throw new Error('Method not implemented.');\n   }\n \n   onSubmit(): void {\n+    console.log(this.productForm.value);\n     alert('Thanks!');\n   }\n }\n"
+                },
+                {
+                    "date": 1704253971513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n \n   private fb = inject(FormBuilder);\n   productForm = this.fb.group({\n     company: null,\n+    price: [null, Validators.required],\n     productName: [null, Validators.required],\n     description: [null, Validators.required]\n   });\n \n"
+                },
+                {
+                    "date": 1704254242087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,24 @@\n import { Component, OnInit, inject } from '@angular/core';\n \n-import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';\n+import { ReactiveFormsModule, FormBuilder, Validators, FormsModule } from '@angular/forms';\n import { MatInputModule } from '@angular/material/input';\n import { MatButtonModule } from '@angular/material/button';\n import { MatSelectModule } from '@angular/material/select';\n import { MatRadioModule } from '@angular/material/radio';\n import { MatCardModule } from '@angular/material/card';\n+import { CommonModule } from '@angular/common';\n+import { MatIconModule } from '@angular/material/icon';\n+import { RouterLink, RouterModule } from '@angular/router';\n \n \n @Component({\n   selector: 'app-product-new',\n   templateUrl: './product-new.component.html',\n   styleUrls: ['./product-new.component.css'],\n   standalone: true,\n   imports: [\n-    MatInputModule,\n-    MatButtonModule,\n-    MatSelectModule,\n-    MatRadioModule,\n-    MatCardModule,\n-    ReactiveFormsModule\n+  \n   ]\n })\n export class ProductNewComponent implements OnInit {\n \n"
+                },
+                {
+                    "date": 1704254255303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,19 @@\n   templateUrl: './product-new.component.html',\n   styleUrls: ['./product-new.component.css'],\n   standalone: true,\n   imports: [\n-  \n+    MatInputModule,\n+    MatButtonModule,\n+    MatRadioModule,\n+    MatCardModule,\n+    ReactiveFormsModule,\n+    FormsModule,\n+    CommonModule,\n+    MatIconModule,\n+    RouterLink,\n+    MatIconModule,\n+    RouterModule\n   ]\n })\n export class ProductNewComponent implements OnInit {\n \n"
+                }
+            ],
+            "date": 1703753521010,
+            "name": "Commit-0",
+            "content": "import { Component, inject } from '@angular/core';\n\nimport { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatSelectModule } from '@angular/material/select';\nimport { MatRadioModule } from '@angular/material/radio';\nimport { MatCardModule } from '@angular/material/card';\n\n\n@Component({\n  selector: 'app-product-new',\n  templateUrl: './product-new.component.html',\n  styleUrls: ['./product-new.component.css'],\n  standalone: true,\n  imports: [\n    MatInputModule,\n    MatButtonModule,\n    MatSelectModule,\n    MatRadioModule,\n    MatCardModule,\n    ReactiveFormsModule\n  ]\n})\nexport class ProductNewComponent {\n  private fb = inject(FormBuilder);\n  addressForm = this.fb.group({\n    company: null,\n    productName: [null, Validators.required],\n    description: [null, Validators.required]\n  });\n\n  onSubmit(): void {\n    alert('Thanks!');\n  }\n}\n"
+        }
+    ]
+}

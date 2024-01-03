@@ -15,3 +15,14 @@
   top: 0;
   z-index: 1;
 }
+.flex-spacer {
+  flex: 1 1 auto;
+}
+.username {
+  margin-right: 10px;
+}
+
+.logout-icon {
+  font-size: 15px;
+  cursor: pointer;
+}

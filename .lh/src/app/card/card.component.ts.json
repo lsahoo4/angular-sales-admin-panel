@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1703577330412,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703663276381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,10 @@\n   styleUrl: './card.component.css'\n })\n export class CardComponent {\n   @Input() title: string = \"\";\n-\n+  isExpanded = false; // Track the expanded state\n+  \n+  toggleExpand() {\n+    this.isExpanded = !this.isExpanded;\n+  }\n }\n"
+                },
+                {
+                    "date": 1703663305395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n+import { CommonModule } from '@angular/common';\n import { Component, Input } from '@angular/core';\n+import { FormsModule } from '@angular/forms';\n import { MatCardModule } from '@angular/material/card';\n import { MatIconModule } from '@angular/material/icon';\n import { MatMenuModule } from '@angular/material/menu';\n \n@@ -8,17 +10,19 @@\n   standalone: true,\n   imports: [\n     MatCardModule,\n     MatIconModule,\n-    MatMenuModule\n+    MatMenuModule,\n+    FormsModule,\n+    CommonModule\n   ],\n   templateUrl: './card.component.html',\n   styleUrl: './card.component.css'\n })\n export class CardComponent {\n   @Input() title: string = \"\";\n   isExpanded = false; // Track the expanded state\n-  \n+\n   toggleExpand() {\n     this.isExpanded = !this.isExpanded;\n   }\n }\n"
+                },
+                {
+                    "date": 1703663390619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n export class CardComponent {\n   @Input() title: string = \"\";\n   isExpanded = false; // Track the expanded state\n \n-  toggleExpand() {\n-    this.isExpanded = !this.isExpanded;\n+  toggleExpand(flag: boolean) {\n+    this.isExpanded = flag;\n   }\n }\n"
                 }
             ],
             "date": 1703577330412,

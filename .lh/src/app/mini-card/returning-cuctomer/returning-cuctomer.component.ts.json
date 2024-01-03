@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/mini-card/returning-cuctomer/returning-cuctomer.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703660516802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703660516802,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'app-returning-cuctomer',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatIconModule\n  ],\n  templateUrl: './returning-cuctomer.component.html',\n  styleUrl: './returning-cuctomer.component.css'\n})\nexport class ReturningCuctomerComponent {\n\n}\n"
+        }
+    ]
+}

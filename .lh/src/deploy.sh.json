@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/deploy.sh",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1704265926446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704265955745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n # To create the script\n-touch deploy.sh && echo \"NETLIFY_TOKEN=<access token> NETLIFY_API_ID=<api id> ng deploy\" >> deploy.sh && chmod +x deploy.sh\n+touch deploy.sh && echo \"NETLIFY_TOKEN=nfp_f6bFJKQzF6imMfL4vwqdxRnxsVTvzxkfca39 NETLIFY_API_ID=7ecefb9d-acf3-4307-afc1-735168d780ea ng deploy\" >> deploy.sh && chmod +x deploy.sh\n \n # To deploy\n ./deploy.sh\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1704265926446,
+            "name": "Commit-0",
+            "content": "# To create the script\ntouch deploy.sh && echo \"NETLIFY_TOKEN=<access token> NETLIFY_API_ID=<api id> ng deploy\" >> deploy.sh && chmod +x deploy.sh\n\n# To deploy\n./deploy.sh"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/sort.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1704258183517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704259243558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n @Injectable({\n   providedIn: 'root'\n })\n export class SortService {\n-\n+  data: any[] = [];\n   currentSort: { column: string; direction: string } = { column: '', direction: 'asc' };\n \n   private sortSubject = new BehaviorSubject<{ column: string; direction: string }>({\n     column: '',\n@@ -28,9 +28,9 @@\n       this.sortSubject.next({ column, direction: 'asc' });\n     }\n   }\n \n-  sortData(data: any[]) {\n+  sortData(data: any[]): any[] {\n     data.sort((a, b) => {\n       const valueA = a[this.currentSort.column];\n       const valueB = b[this.currentSort.column];\n \n@@ -48,10 +48,11 @@\n \n     if (this.currentSort.direction === 'desc') {\n       data.reverse();\n     }\n+    return data;\n   }\n-  \n+\n   compareStrings(a: string, b: string): number {\n     return a.localeCompare(b);\n   }\n \n"
+                },
+                {
+                    "date": 1704259646963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n     }\n   }\n \n   sortData(data: any[]): any[] {\n+    this.currentSort = this.sortSubject.getValue();\n     data.sort((a, b) => {\n       const valueA = a[this.currentSort.column];\n       const valueB = b[this.currentSort.column];\n \n"
+                }
+            ],
+            "date": 1704258183517,
+            "name": "Commit-0",
+            "content": "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SortService {\n\n  currentSort: { column: string; direction: string } = { column: '', direction: 'asc' };\n\n  private sortSubject = new BehaviorSubject<{ column: string; direction: string }>({\n    column: '',\n    direction: 'asc', // Default sorting direction is ascending\n  });\n\n  getSort(): Observable<{ column: string; direction: string }> {\n    return this.sortSubject.asObservable();\n  }\n\n  setSort(column: string): void {\n    const currentSort = this.sortSubject.getValue();\n    if (currentSort.column === column) {\n      // If clicking on the same column, toggle the sorting direction\n      const newDirection = currentSort.direction === 'asc' ? 'desc' : 'asc';\n      this.sortSubject.next({ column, direction: newDirection });\n    } else {\n      // If clicking on a new column, set the sorting direction to ascending\n      this.sortSubject.next({ column, direction: 'asc' });\n    }\n  }\n\n  sortData(data: any[]) {\n    data.sort((a, b) => {\n      const valueA = a[this.currentSort.column];\n      const valueB = b[this.currentSort.column];\n\n      // Handle different data types (e.g., numbers, strings, dates)\n      if (typeof valueA === 'string' && typeof valueB === 'string') {\n        return this.compareStrings(valueA, valueB);\n      } else if (typeof valueA === 'number' && typeof valueB === 'number') {\n        return this.compareNumbers(valueA, valueB);\n      } else if (valueA instanceof Date && valueB instanceof Date) {\n        return this.compareDates(valueA, valueB);\n      }\n\n      return 0; // Default case: no sorting\n    });\n\n    if (this.currentSort.direction === 'desc') {\n      data.reverse();\n    }\n  }\n  \n  compareStrings(a: string, b: string): number {\n    return a.localeCompare(b);\n  }\n\n  compareNumbers(a: number, b: number): number {\n    return a - b;\n  }\n\n  compareDates(a: Date, b: Date): number {\n    return a.getTime() - b.getTime();\n  }\n\n  constructor() { }\n  \n}\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/charts/product-sales-chart/product-sales-chart.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1703582720073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703651294883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Component } from '@angular/core';\n-import { ChartOptions, ChartType } from 'chart.js';\n+import { ChartData, ChartOptions, ChartType } from 'chart.js';\n import { NgChartsModule } from 'ng2-charts';\n \n @Component({\n   selector: 'app-product-sales-chart',\n@@ -9,17 +9,22 @@\n   standalone: true,\n   imports: [ NgChartsModule ]\n })\n export class ProductSalesChartComponent {\n-  public radarChartOptions: ChartOptions = {\n-    responsive: true,\n+\n+  public radarChartOptions: ChartOptions<'radar'> = {\n+    responsive: false\n   };\n+\n   public radarChartLabels: any[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];\n \n-  public radarChartData: any[] = [\n-    { data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A' },\n-    { data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B' }\n-  ];\n+  public radarChartData: ChartData<'radar'> = {\n+    labels: this.radarChartLabels,\n+    datasets: [\n+      { data: [65, 59, 90, 81, 56, 55, 40]},\n+      { data: [28, 48, 40, 19, 96, 27, 100]},\n+    ],\n+  };\n   public radarChartType: ChartType = 'radar';\n \n   constructor() { }\n }\n"
+                },
+                {
+                    "date": 1703651852493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   public radarChartOptions: ChartOptions<'radar'> = {\n     responsive: false\n   };\n \n-  public radarChartLabels: any[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];\n+  public radarChartLabels: any[] = ['Online','In Store'];\n \n   public radarChartData: ChartData<'radar'> = {\n     labels: this.radarChartLabels,\n     datasets: [\n"
+                },
+                {
+                    "date": 1703651867370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { Component } from '@angular/core';\n+import { ChartData, ChartOptions, ChartType } from 'chart.js';\n+import { NgChartsModule } from 'ng2-charts';\n+\n+@Component({\n+  selector: 'app-product-sales-chart',\n+  templateUrl: './product-sales-chart.component.html',\n+  styleUrls: ['./product-sales-chart.component.css'],\n+  standalone: true,\n+  imports: [ NgChartsModule ]\n+})\n+export class ProductSalesChartComponent {\n+\n+  public radarChartOptions: ChartOptions<'radar'> = {\n+    responsive: false\n+  };\n+\n+  public radarChartLabels: any[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];\n+\n+  public radarChartData: ChartData<'radar'> = {\n+    labels: this.radarChartLabels,\n+    datasets: [\n+      { data: [65, 59, 90, 81, 56, 55, 40]},\n+      { data: [28, 48, 40, 19, 96, 27, 100]},\n+    ],\n+  };\n+  public radarChartType: ChartType = 'radar';\n+\n+  constructor() { }\n+}\n"
+                },
+                {
+                    "date": 1703651939926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   public radarChartOptions: ChartOptions<'radar'> = {\n     responsive: false\n   };\n \n-  public radarChartLabels: any[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];\n+  public radarChartLabels: any[] = ['Bags', 'Wallets', 'Cases', 'Others', 'Keyboards', 'Cycling', 'Running'];\n \n   public radarChartData: ChartData<'radar'> = {\n     labels: this.radarChartLabels,\n     datasets: [\n"
+                },
+                {
+                    "date": 1703651975437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,34 +27,4 @@\n   public radarChartType: ChartType = 'radar';\n \n   constructor() { }\n }\n-import { Component } from '@angular/core';\n-import { ChartData, ChartOptions, ChartType } from 'chart.js';\n-import { NgChartsModule } from 'ng2-charts';\n-\n-@Component({\n-  selector: 'app-product-sales-chart',\n-  templateUrl: './product-sales-chart.component.html',\n-  styleUrls: ['./product-sales-chart.component.css'],\n-  standalone: true,\n-  imports: [ NgChartsModule ]\n-})\n-export class ProductSalesChartComponent {\n-\n-  public radarChartOptions: ChartOptions<'radar'> = {\n-    responsive: false\n-  };\n-\n-  public radarChartLabels: any[] = ['Online','In Store'];\n-\n-  public radarChartData: ChartData<'radar'> = {\n-    labels: this.radarChartLabels,\n-    datasets: [\n-      { data: [65, 59, 90, 81, 56, 55, 40]},\n-      { data: [28, 48, 40, 19, 96, 27, 100]},\n-    ],\n-  };\n-  public radarChartType: ChartType = 'radar';\n-\n-  constructor() { }\n-}\n"
+                },
+                {
+                    "date": 1703651994848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   public radarChartOptions: ChartOptions<'radar'> = {\n     responsive: false\n   };\n \n-  public radarChartLabels: any[] = ['Bags', 'Wallets', 'Cases', 'Others', 'Keyboards', 'Cycling', 'Running'];\n+  public radarChartLabels: any[] = ['Bags', 'Wallets', 'Cases', 'Others', 'Keyboards'];\n \n   public radarChartData: ChartData<'radar'> = {\n     labels: this.radarChartLabels,\n     datasets: [\n"
+                }
+            ],
+            "date": 1703582720073,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { ChartOptions, ChartType } from 'chart.js';\nimport { NgChartsModule } from 'ng2-charts';\n\n@Component({\n  selector: 'app-product-sales-chart',\n  templateUrl: './product-sales-chart.component.html',\n  styleUrls: ['./product-sales-chart.component.css'],\n  standalone: true,\n  imports: [ NgChartsModule ]\n})\nexport class ProductSalesChartComponent {\n  public radarChartOptions: ChartOptions = {\n    responsive: true,\n  };\n  public radarChartLabels: any[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];\n\n  public radarChartData: any[] = [\n    { data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A' },\n    { data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B' }\n  ];\n  public radarChartType: ChartType = 'radar';\n\n  constructor() { }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/customer/customer-table/customer-table.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1703748791608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703749083618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n .full-width-table {\n   width: 100%;\n }\n \n-.new-product-button {\n+/* .new-product-button {\n   position: absolute;\n   top: 0;\n   right: 0;\n-}\n+} */\n \n .table-container {\n   position: relative;\n }\n"
+                },
+                {
+                    "date": 1703749359409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,7 @@\n .full-width-table {\n   width: 100%;\n }\n \n-/* .new-product-button {\n-  position: absolute;\n-  top: 0;\n-  right: 0;\n-} */\n-\n .table-container {\n   position: relative;\n }\n"
+                },
+                {
+                    "date": 1703749837915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,10 @@\n \n .table-container {\n   position: relative;\n }\n+\n+.new-product-button {\n+  position: absolute;\n+  top: 0;\n+  right: 0;\n+}\n"
+                },
+                {
+                    "date": 1703749921489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n }\n \n .new-product-button {\n   position: absolute;\n-  top: 0;\n-  right: 0;\n+  top: 16px;\n+  right: 18px;\n }\n"
+                },
+                {
+                    "date": 1704176081202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+.full-width-table {\n+  width: 100%;\n+}\n+\n+.table-container {\n+  position: relative;\n+}\n+\n+.new-product-button {\n+  position: absolute;\n+  top: 16px;\n+  right: 18px;\n+}\n+\n+.full-width {\n+  width: 100%;\n+}\n+\n+.row {\n+  display: flex;\n+  flex-direction: row;\n+}\n+\n+.col {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n"
+                },
+                {
+                    "date": 1704176288781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,30 +11,5 @@\n   top: 16px;\n   right: 18px;\n }\n \n-.full-width {\n-  width: 100%;\n-}\n \n-.row {\n-  display: flex;\n-  flex-direction: row;\n-}\n-\n-.col {\n-  flex: 1;\n-  margin-right: 20px;\n-}\n-.full-width-table {\n-  width: 100%;\n-}\n-\n-.table-container {\n-  position: relative;\n-}\n-\n-.new-product-button {\n-  position: absolute;\n-  top: 16px;\n-  right: 18px;\n-}\n"
+                }
+            ],
+            "date": 1703748791608,
+            "name": "Commit-0",
+            "content": ".full-width-table {\n  width: 100%;\n}\n\n.new-product-button {\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n\n.table-container {\n  position: relative;\n}\n"
+        }
+    ]
+}

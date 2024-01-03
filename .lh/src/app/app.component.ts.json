@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1703576705424,
@@ -12,6 +12,10 @@
                 {
                     "date": 1703576866637,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { Component } from '@angular/core';\n import { CommonModule } from '@angular/common';\n import { RouterOutlet } from '@angular/router';\n import { NgChartsModule } from 'ng2-charts';\n+import { NavbarComponent } from './navbar/navbar.component';\n \n \n @Component({\n   selector: 'app-root',\n   standalone: true,\n-  imports: [CommonModule, RouterOutlet, NgChartsModule],\n+  imports: [CommonModule, RouterOutlet, NgChartsModule, NavbarComponent],\n   templateUrl: './app.component.html',\n   styleUrl: './app.component.css'\n })\n export class AppComponent {\n"
+                },
+                {
+                    "date": 1704254242088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,36 @@\n import { Component } from '@angular/core';\n-import { CommonModule } from '@angular/common';\n-import { RouterOutlet } from '@angular/router';\n+\n+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';\n import { NgChartsModule } from 'ng2-charts';\n import { NavbarComponent } from './navbar/navbar.component';\n+import { MatInputModule } from '@angular/material/input';\n+import { MatButtonModule } from '@angular/material/button';\n+import { MatRadioModule } from '@angular/material/radio';\n+import { MatCardModule } from '@angular/material/card';\n+import { FormsModule, ReactiveFormsModule } from '@angular/forms';\n+import { CommonModule } from '@angular/common';\n+import { MatIconModule } from '@angular/material/icon';\n \n \n @Component({\n   selector: 'app-root',\n   standalone: true,\n-  imports: [CommonModule, RouterOutlet, NgChartsModule, NavbarComponent],\n+  imports: [\n+    RouterOutlet, \n+    NgChartsModule,\n+     NavbarComponent,\n+     MatInputModule,\n+     MatButtonModule,\n+     MatRadioModule,\n+     MatCardModule,\n+     ReactiveFormsModule,\n+     FormsModule,\n+     CommonModule,\n+     MatIconModule,\n+     RouterLink,\n+     MatIconModule,\n+     RouterModule],\n   templateUrl: './app.component.html',\n   styleUrl: './app.component.css'\n })\n export class AppComponent {\n"
                 }
             ],
             "date": 1703576705424,

@@ -1,0 +1,46 @@
+<form [formGroup]="productForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>New Product</mat-card-title>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+        <button mat-raised-button color="primary" class="new-product-button" type="button" fxFlex="auto" [routerLink]="['../']">
+          <mat-icon>arrow_back</mat-icon> Back
+        </button>
+      </mat-card-actions>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product name" formControlName="productName">
+            @if (productForm.controls['productName'].hasError('required')) {
+              <mat-error>Product name is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input type="number" matInput placeholder="Price" formControlName="price">
+            @if (productForm.controls['price'].hasError('required')) {
+              <mat-error>Price name is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+            @if (productForm.controls['description'].hasError('required')) {
+              <mat-error>Description is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"  [disabled]="productForm.invalid" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

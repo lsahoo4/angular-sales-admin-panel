@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1703576827270,
@@ -12,6 +12,38 @@
                 {
                     "date": 1703576912596,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,6 +21,7 @@\n       }\n       <span>store-admin-panel</span>\n     </mat-toolbar>\n     <!-- Add Content Here -->\n+    <router-outlet></router-outlet>\n   </mat-sidenav-content>\n </mat-sidenav-container>\n"
+                },
+                {
+                    "date": 1703652781316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <mat-sidenav-container class=\"sidenav-container\">\n   <mat-sidenav #drawer class=\"sidenav\" fixedInViewport\n       [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n       [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n-      [opened]=\"(isHandset$ | async) === false\">\n+      [opened]=\"(isHandset$ | async) ? true : false\">\n     <mat-toolbar>Menu</mat-toolbar>\n     <mat-nav-list>\n       <a *ngFor=\"let item of menuItems\" mat-list-item [routerLink]=\"'/'+item\"> {{item | titlecase}} </a>\n       </mat-nav-list>\n"
+                },
+                {
+                    "date": 1703652899190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <mat-sidenav-container class=\"sidenav-container\">\n   <mat-sidenav #drawer class=\"sidenav\" fixedInViewport\n       [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n       [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n-      [opened]=\"(isHandset$ | async) ? true : false\">\n+      [opened]=\"(isHandset$ | async) ? false : true\">\n     <mat-toolbar>Menu</mat-toolbar>\n     <mat-nav-list>\n       <a *ngFor=\"let item of menuItems\" mat-list-item [routerLink]=\"'/'+item\"> {{item | titlecase}} </a>\n       </mat-nav-list>\n"
+                },
+                {
+                    "date": 1703652905069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <mat-sidenav-container class=\"sidenav-container\">\n   <mat-sidenav #drawer class=\"sidenav\" fixedInViewport\n       [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n       [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n-      [opened]=\"(isHandset$ | async) ? false : true\">\n+      [opened]=\"(isHandset$ | async) ? true : false\">\n     <mat-toolbar>Menu</mat-toolbar>\n     <mat-nav-list>\n       <a *ngFor=\"let item of menuItems\" mat-list-item [routerLink]=\"'/'+item\"> {{item | titlecase}} </a>\n       </mat-nav-list>\n"
+                },
+                {
+                    "date": 1703652964550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,39 @@\n <mat-sidenav-container class=\"sidenav-container\">\n   <mat-sidenav #drawer class=\"sidenav\" fixedInViewport\n-      [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n-      [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n-      [opened]=\"(isHandset$ | async) ? true : false\">\n+    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n+    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n+    [opened]=\"(isHandset$ | async) ? true : false\">\n     <mat-toolbar>Menu</mat-toolbar>\n+    <mat-divider></mat-divider>\n     <mat-nav-list>\n-      <a *ngFor=\"let item of menuItems\" mat-list-item [routerLink]=\"'/'+item\"> {{item | titlecase}} </a>\n-      </mat-nav-list>\n+      @for (item of menuItems; track item) {\n+        <a mat-list-item [routerLink]=\"'/'+item\" routerLinkActive=\"active-link\" class=\"menu-item\">\n+          {{item | titlecase }}\n+        </a>\n+      }\n+    </mat-nav-list>\n+\n+    <h3 style=\"margin-right: 95px;\">Task-2</h3>\n+    <mat-divider></mat-divider>\n   </mat-sidenav>\n   <mat-sidenav-content>\n     <mat-toolbar color=\"primary\">\n-      @if (isHandset$ | async) {\n-        <button\n-          type=\"button\"\n-          aria-label=\"Toggle sidenav\"\n-          mat-icon-button\n-          (click)=\"drawer.toggle()\">\n-          <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n-        </button>\n-      }\n-      <span>store-admin-panel</span>\n+      <button\n+        type=\"button\"\n+        aria-label=\"Toggle sidenav\"\n+        mat-icon-button\n+        (click)=\"drawer.toggle()\">\n+        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n+      </button>\n+      <span>Dashboard</span>\n+      <span class=\"flex-spacer\"></span>\n+      <div class=\"navbar-right\">\n+        <span class=\"username\">Welcome, User</span>\n+        <span class=\"material-icons logout-icon\">logout</span>\n+      </div>\n     </mat-toolbar>\n-    <!-- Add Content Here -->\n-    <router-outlet></router-outlet>\n+    <div class=\"container\">\n+      <router-outlet></router-outlet>\n+    </div>\n   </mat-sidenav-content>\n-</mat-sidenav-container>\n+</mat-sidenav-container>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703653020724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,8 @@\n           {{item | titlecase }}\n         </a>\n       }\n     </mat-nav-list>\n-\n-    <h3 style=\"margin-right: 95px;\">Task-2</h3>\n-    <mat-divider></mat-divider>\n   </mat-sidenav>\n   <mat-sidenav-content>\n     <mat-toolbar color=\"primary\">\n       <button\n"
+                },
+                {
+                    "date": 1703758033192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         mat-icon-button\n         (click)=\"drawer.toggle()\">\n         <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n       </button>\n-      <span>Dashboard</span>\n+      <span>Product Sales Admin</span>\n       <span class=\"flex-spacer\"></span>\n       <div class=\"navbar-right\">\n         <span class=\"username\">Welcome, User</span>\n         <span class=\"material-icons logout-icon\">logout</span>\n"
+                },
+                {
+                    "date": 1704179649390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         mat-icon-button\n         (click)=\"drawer.toggle()\">\n         <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n       </button>\n-      <span>Product Sales Admin</span>\n+      <!-- <span>Product Sales Admin</span> -->\n       <span class=\"flex-spacer\"></span>\n       <div class=\"navbar-right\">\n         <span class=\"username\">Welcome, User</span>\n         <span class=\"material-icons logout-icon\">logout</span>\n"
+                },
+                {
+                    "date": 1704214505304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         mat-icon-button\n         (click)=\"drawer.toggle()\">\n         <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n       </button>\n-      <!-- <span>Product Sales Admin</span> -->\n+      <span>Product Sales Admin</span>\n       <span class=\"flex-spacer\"></span>\n       <div class=\"navbar-right\">\n         <span class=\"username\">Welcome, User</span>\n         <span class=\"material-icons logout-icon\">logout</span>\n"
                 }
             ],
             "date": 1703576827270,

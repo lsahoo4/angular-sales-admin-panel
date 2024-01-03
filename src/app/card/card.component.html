@@ -1,5 +1,5 @@
 <!--card.component.html-->
-<mat-card class="dashboard-card">
+<mat-card class="dashboard-card" [ngClass]="{'expanded-card': isExpanded}">
     <mat-card-header>
         <mat-card-title>
             {{title}}
@@ -7,8 +7,8 @@
                 <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
+                <button mat-menu-item *ngIf="!isExpanded" (click)="toggleExpand(true)">Expand</button>
+                <button mat-menu-item *ngIf="isExpanded" (click)="toggleExpand(false)">Remove</button>
             </mat-menu> -->
         </mat-card-title>
     </mat-card-header>

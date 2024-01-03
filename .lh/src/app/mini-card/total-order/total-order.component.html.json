@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/mini-card/total-order/total-order.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1703660516802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703662188801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n       <!-- 3rd Card: Total Orders -->\n       <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon\" mat-card-avatar>shopping_cart</mat-icon>\n+            <mat-icon class=\"dashboard-icon outlined-icon\" mat-card-avatar>shopping_cart</mat-icon>\n             <h1 style=\"margin-left: 10px;\">243</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                }
+            ],
+            "date": 1703660516802,
+            "name": "Commit-0",
+            "content": "      <!-- 3rd Card: Total Orders -->\n      <mat-card class=\"dashboard-card\">\n        <mat-card-header>\n          <div style=\"display: flex; align-items: center;\">\n            <mat-icon class=\"dashboard-icon\" mat-card-avatar>shopping_cart</mat-icon>\n            <h1 style=\"margin-left: 10px;\">243</h1>\n          </div>\n        </mat-card-header>\n        <mat-card-content class=\"dashboard-card-content\">\n          <p style=\"text-align: center;\">Total Orders</p>\n          <p class=\"dashboard-increase\">+45.65% <mat-icon>arrow_upward</mat-icon> <span class=\"_p\">since last month</span> </p>\n        </mat-card-content>\n      </mat-card>\n"
+        }
+    ]
+}

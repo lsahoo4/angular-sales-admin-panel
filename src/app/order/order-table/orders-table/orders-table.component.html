@@ -1,0 +1,101 @@
+<!-- orders-table.component.html -->
+
+<mat-card class="shipping-card">
+  <mat-card-header>
+    <mat-card-title>Orders</mat-card-title>
+    @if (showAddButton) {
+    <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+      <button mat-raised-button color="primary" class="new-product-button" type="button" fxFlex="auto"
+        (click)="addNew()">
+        <mat-icon>add_circle_outline</mat-icon> New Order
+      </button>
+    </mat-card-actions>
+    }
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="full-width">
+          <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="mat-elevation-z8">
+      <table mat-table class="full-width-table" matSort aria-label="Elements">
+        <!-- Id Column -->
+        <ng-container matColumnDef="orderId">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Order Id</th>
+          <td mat-cell *matCellDef="let row">{{row.orderId}}</td>
+        </ng-container>
+
+        <!-- Date Column -->
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+          <td mat-cell *matCellDef="let row">{{row.date | date }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="user">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>user</th>
+          <td mat-cell *matCellDef="let row">{{row.user}}</td>
+        </ng-container>
+
+        <!-- Order Total Column -->
+        <ng-container matColumnDef="orderTotal">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Order Total</th>
+          <td mat-cell *matCellDef="let row">{{row.orderTotal | currency}}</td>
+        </ng-container>
+
+        <!-- Payment Mode Column -->
+        <ng-container matColumnDef="paymentMode">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Payment Mode</th>
+          <td mat-cell *matCellDef="let row">{{row.paymentMode}}</td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let row">
+            <mat-chip-listbox>
+              <mat-chip-option
+                color="{{ row.status == 'delivered' ? 'primary' : ( row.status == 'shipped' ? 'accent' : 'warn' ) }}"
+                selected>
+                {{row.status}}
+              </mat-chip-option>
+            </mat-chip-listbox>
+          </td>
+        </ng-container>
+        @if (isAdmin){
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-raised-button color="primary">View</button>
+          </td>
+        </ng-container>
+        } @else {
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-button color="primary"><mat-icon>edit</mat-icon></button>
+            <button mat-button><mat-icon>visibility</mat-icon></button>
+            <button mat-button color="warn"><mat-icon>delete</mat-icon></button>
+          </td>
+        </ng-container>
+        }
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <div [hidden]="isTableHasData" class="center-message" style="text-align: center; padding: 20px;">
+        No Data available.
+      </div>
+
+      <mat-paginator #paginator [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 20]" aria-label="Select page">
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>

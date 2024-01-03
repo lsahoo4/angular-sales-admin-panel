@@ -1,0 +1,10 @@
+.full-width-table {
+  width: 100%;
+}
+
+
+.new-product-button {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+}

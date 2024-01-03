@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/charts/sales-traffic-chart/sales-traffic-chart.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703582720071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703651294881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,14 @@\n   standalone: true,\n   imports: [ NgChartsModule ]\n })\n export class SalesTrafficChartComponent {\n-  public pieChartOptions: ChartOptions = {\n-    responsive: true,\n+\n+  public pieChartOptions: ChartOptions<'pie'> = {\n+    responsive: false\n   };\n+\n+\n   public pieChartLabels: any[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];\n   public pieChartData: any = [300, 500, 100];\n   public pieChartType: ChartType = 'pie';\n   public pieChartLegend = true;\n"
+                },
+                {
+                    "date": 1703651760580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { Component } from '@angular/core';\n-import { ChartOptions, ChartType } from 'chart.js';\n+import { ChartData, ChartOptions, ChartType } from 'chart.js';\n import { NgChartsModule } from 'ng2-charts';\n+import DatalabelsPlugin from 'chartjs-plugin-datalabels';\n \n @Component({\n   selector: 'app-sales-traffic-chart',\n   templateUrl: './sales-traffic-chart.component.html',\n@@ -14,13 +15,20 @@\n   public pieChartOptions: ChartOptions<'pie'> = {\n     responsive: false\n   };\n \n+  public pieChartLabels: any[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];\n \n-  public pieChartLabels: any[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];\n-  public pieChartData: any = [300, 500, 100];\n+  public pieChartData: ChartData<'pie', number[], string | string[]> = {\n+    labels: [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'],\n+    datasets: [\n+      {\n+        data: [300, 500, 100],\n+      },\n+    ],\n+  };\n   public pieChartType: ChartType = 'pie';\n   public pieChartLegend = true;\n-  public pieChartPlugins = [];\n+  public pieChartPlugins = [ DatalabelsPlugin ];\n \n   constructor() { }\n }\n"
+                },
+                {
+                    "date": 1703652218188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+import { Component } from '@angular/core';\n+import { ChartData, ChartOptions, ChartType } from 'chart.js';\n+import { NgChartsModule } from 'ng2-charts';\n+import DatalabelsPlugin from 'chartjs-plugin-datalabels';\n+\n+@Component({\n+  selector: 'app-sales-traffic-chart',\n+  templateUrl: './sales-traffic-chart.component.html',\n+  styleUrls: ['./sales-traffic-chart.component.css'],\n+  standalone: true,\n+  imports: [ NgChartsModule ]\n+})\n+export class SalesTrafficChartComponent {\n+\n+  public pieChartOptions: ChartOptions<'pie'> = {\n+    responsive: false\n+  };\n+\n+  public pieChartLabels: any[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];\n+\n+  public pieChartData: ChartData<'pie', number[], string | string[]> = {\n+    labels: ['search', 'Direct', 'Social', 'Email', 'Unknown'],\n+    datasets: [\n+      {\n+        data: [300, 200, 300, 250, 100],\n+      },\n+    ],\n+  };\n+  public pieChartType: ChartType = 'pie';\n+  public pieChartLegend = true;\n+  public pieChartPlugins = [ DatalabelsPlugin ];\n+\n+  constructor() { }\n+}\n"
+                }
+            ],
+            "date": 1703582720071,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\nimport { ChartOptions, ChartType } from 'chart.js';\nimport { NgChartsModule } from 'ng2-charts';\n\n@Component({\n  selector: 'app-sales-traffic-chart',\n  templateUrl: './sales-traffic-chart.component.html',\n  styleUrls: ['./sales-traffic-chart.component.css'],\n  standalone: true,\n  imports: [ NgChartsModule ]\n})\nexport class SalesTrafficChartComponent {\n  public pieChartOptions: ChartOptions = {\n    responsive: true,\n  };\n  public pieChartLabels: any[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];\n  public pieChartData: any = [300, 500, 100];\n  public pieChartType: ChartType = 'pie';\n  public pieChartLegend = true;\n  public pieChartPlugins = [];\n\n  constructor() { }\n}\n"
+        }
+    ]
+}

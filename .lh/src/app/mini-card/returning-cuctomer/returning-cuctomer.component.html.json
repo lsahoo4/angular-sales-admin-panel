@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/mini-card/returning-cuctomer/returning-cuctomer.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703660516802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703662188805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n      <!-- 4th Card: Returning Customers -->\n      <mat-card class=\"dashboard-card\">\n         <mat-card-header>\n           <div style=\"display: flex; align-items: center;\">\n-            <mat-icon class=\"dashboard-icon\" mat-card-avatar>person</mat-icon>\n+            <mat-icon class=\"dashboard-icon outlined-icon\" mat-card-avatar>person</mat-icon>\n             <h1 style=\"margin-left: 10px;\">35</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n"
+                },
+                {
+                    "date": 1704179722501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n             <h1 style=\"margin-left: 10px;\">35</h1>\n           </div>\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n-          <p style=\"text-align: center;\">Returning Customers</p>\n+          <!-- <p style=\"text-align: center;\">Returning Customers</p> -->\n+          <p style=\"text-align: center;\">Total Customers</p>\n           <p class=\"dashboard-decrease\">83.61% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n         </mat-card-content>\n       </mat-card>\n"
+                },
+                {
+                    "date": 1704179772417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,6 @@\n         </mat-card-header>\n         <mat-card-content class=\"dashboard-card-content\">\n           <!-- <p style=\"text-align: center;\">Returning Customers</p> -->\n           <p style=\"text-align: center;\">Total Customers</p>\n-          <p class=\"dashboard-decrease\">83.61% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n-        </mat-card-content>\n+          <p class=\"dashboard-increase\">+15.83% <mat-icon>arrow_upward</mat-icon> <span class=\"_p\">since last month</span> </p>        </mat-card-content>\n       </mat-card>\n"
+                }
+            ],
+            "date": 1703660516802,
+            "name": "Commit-0",
+            "content": "     <!-- 4th Card: Returning Customers -->\n     <mat-card class=\"dashboard-card\">\n        <mat-card-header>\n          <div style=\"display: flex; align-items: center;\">\n            <mat-icon class=\"dashboard-icon\" mat-card-avatar>person</mat-icon>\n            <h1 style=\"margin-left: 10px;\">35</h1>\n          </div>\n        </mat-card-header>\n        <mat-card-content class=\"dashboard-card-content\">\n          <p style=\"text-align: center;\">Returning Customers</p>\n          <p class=\"dashboard-decrease\">83.61% <mat-icon>arrow_downward</mat-icon> <span class=\"_p\">since last month</span> </p>\n        </mat-card-content>\n      </mat-card>\n"
+        }
+    ]
+}

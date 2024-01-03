@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/mini-card/mini-card.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1703654779640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703654832721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n @Input({required: true}) percentValue: string = '';\n \n \n   ngOnInit(): void {\n-    throw new Error('Method not implemented.');\n+    // throw new Error('Method not implemented.');\n   }\n \n }\n"
+                },
+                {
+                    "date": 1703655840013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Component, Input, OnInit } from '@angular/core';\n+\n+@Component({\n+  selector: 'app-mini-card',\n+  standalone: true,\n+  imports: [],\n+  templateUrl: './mini-card.component.html',\n+  styleUrl: './mini-card.component.css'\n+})\n+export class MiniCardComponent implements OnInit {\n+\n+@Input({required: true}) data: any =  {} as any;\n+\n+  ngOnInit(): void {\n+    // throw new Error('Method not implemented.');\n+  }\n+\n+}\n"
+                },
+                {
+                    "date": 1703655966182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n import { Component, Input, OnInit } from '@angular/core';\n+import { MatCardModule } from '@angular/material/card';\n+import { MatIconModule } from '@angular/material/icon';\n \n @Component({\n   selector: 'app-mini-card',\n   standalone: true,\n-  imports: [],\n+  imports: [ MatCardModule,\n+    MatIconModule,],\n   templateUrl: './mini-card.component.html',\n   styleUrl: './mini-card.component.css'\n })\n export class MiniCardComponent implements OnInit {\n@@ -15,27 +18,4 @@\n     // throw new Error('Method not implemented.');\n   }\n \n }\n-import { Component, Input, OnInit } from '@angular/core';\n-\n-@Component({\n-  selector: 'app-mini-card',\n-  standalone: true,\n-  imports: [],\n-  templateUrl: './mini-card.component.html',\n-  styleUrl: './mini-card.component.css'\n-})\n-export class MiniCardComponent implements OnInit {\n-\n-@Input({required: true}) title: string = '';\n-@Input({required: true}) textValue: string = '';\n-@Input({required: true}) value: string = '';\n-@Input({required: true}) color: string = '';\n-@Input({required: true}) percentValue: string = '';\n-\n-\n-  ngOnInit(): void {\n-    // throw new Error('Method not implemented.');\n-  }\n-\n-}\n"
+                },
+                {
+                    "date": 1703659996982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   styleUrl: './mini-card.component.css'\n })\n export class MiniCardComponent implements OnInit {\n \n-@Input({required: true}) data: any =  {} as any;\n+@Input({required: false}) data: any =  {} as any;\n \n   ngOnInit(): void {\n     // throw new Error('Method not implemented.');\n   }\n"
+                },
+                {
+                    "date": 1703660516812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n \n @Component({\n   selector: 'app-mini-card',\n   standalone: true,\n-  imports: [ MatCardModule,\n-    MatIconModule,],\n+  imports: [ \n+    MatCardModule,\n+    MatIconModule\n+  ],\n   templateUrl: './mini-card.component.html',\n   styleUrl: './mini-card.component.css'\n })\n export class MiniCardComponent implements OnInit {\n"
+                },
+                {
+                    "date": 1703660542512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,18 @@\n import { Component, Input, OnInit } from '@angular/core';\n import { MatCardModule } from '@angular/material/card';\n import { MatIconModule } from '@angular/material/icon';\n+import { TotalSaleComponent } from './total-sale/total-sale.component';\n+import { AverageValueComponent } from './average-value/average-value.component';\n \n @Component({\n   selector: 'app-mini-card',\n   standalone: true,\n   imports: [ \n     MatCardModule,\n-    MatIconModule\n+    MatIconModule,\n+    TotalSaleComponent,\n+    AverageValueComponent\n   ],\n   templateUrl: './mini-card.component.html',\n   styleUrl: './mini-card.component.css'\n })\n"
+                }
+            ],
+            "date": 1703654779640,
+            "name": "Commit-0",
+            "content": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-mini-card',\n  standalone: true,\n  imports: [],\n  templateUrl: './mini-card.component.html',\n  styleUrl: './mini-card.component.css'\n})\nexport class MiniCardComponent implements OnInit {\n\n@Input({required: true}) title: string = '';\n@Input({required: true}) textValue: string = '';\n@Input({required: true}) value: string = '';\n@Input({required: true}) color: string = '';\n@Input({required: true}) percentValue: string = '';\n\n\n  ngOnInit(): void {\n    throw new Error('Method not implemented.');\n  }\n\n}\n"
+        }
+    ]
+}
