@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
+## command to run generate templates
+
+## generate side nav
+  ng generate @angular/material:navigation nav
+
+## generate- charts
+ * ng generate ng2-charts:<chart-type> <chart-name>
+
+ng generate ng2-charts:radar charts/product-sales-chart
+ng generate ng2-charts:pie charts/sales-traffic-chart
+ng generate ng2-charts:line charts/annual-sales-chart 
+ng generate ng2-charts:bar charts/store-sessions-chart
+
+## generate mateial table
+  ng generate @angular/material:table orders-table
+
+## for control flow angular v17
+  ng g @angular/core:control-flow
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
